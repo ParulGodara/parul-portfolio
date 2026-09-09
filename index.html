@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Parul Godara — Social Media & Marketing</title>
+<meta name="description" content="Parul Godara — freelance Social Media Manager & Marketing professional. Influencer marketing, content, and campaign execution for D2C and international brands." />
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="Parul Godara — Social Media & Marketing" />
+<meta property="og:description" content="Freelance Social Media Manager & Marketing professional. Influencer marketing, content & campaign execution." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/parul-hero.png" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --bg:#FBFAF6;
+    --surface:#FFFFFF;
+    --ink:#17140F;
+    --muted:#6E675E;
+    --line:#EAE4D9;
+    --accent:#FF5A36;
+    --accent-2:#FF3D77;
+    --grad:linear-gradient(120deg,#FF7A3D 0%,#FF5A36 45%,#FF3D77 100%);
+    --radius:20px;
+    --maxw:1180px;
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .serif{font-family:var(--serif)}
+  .accent{color:var(--accent)}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;
+    padding:13px 22px;border-radius:100px;border:1px solid transparent;cursor:pointer;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;white-space:nowrap;
+  }
+  .btn-primary{background:var(--ink);color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(23,20,15,.22)}
+  .btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .btn-grad{background:var(--grad);color:#fff}
+  .btn-grad:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,90,54,.35)}
+
+  /* ---------- Header ---------- */
+  header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(140%) blur(12px);
+    background:rgba(251,250,246,.8);border-bottom:1px solid transparent;transition:border-color .3s}
+  header.scrolled{border-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{font-family:var(--serif);font-weight:600;font-size:21px;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--grad);display:inline-block}
+  .nav-links{display:flex;align-items:center;gap:32px}
+  .nav-links a{font-size:15px;font-weight:500;color:var(--muted);transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.3s}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:76px 0 40px;position:relative}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
+  .eyebrow::before{content:"";width:26px;height:1.5px;background:var(--accent)}
+  h1.title{font-family:var(--serif);font-weight:500;font-size:clamp(2.7rem,6vw,4.6rem);
+    line-height:1.02;letter-spacing:-.02em;margin-bottom:24px}
+  h1.title em{font-style:italic;color:var(--accent)}
+  .lead{font-size:19px;color:var(--muted);max-width:33ch;margin-bottom:32px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+  .hero-badges{display:flex;gap:26px;flex-wrap:wrap}
+  .hero-badges .b{font-size:14px;color:var(--muted)}
+  .hero-badges .b strong{display:block;font-family:var(--serif);font-size:26px;color:var(--ink);font-weight:600;line-height:1}
+  .hero-photo{position:relative;display:flex;justify-content:center}
+  .hero-photo .blob{position:absolute;inset:auto;width:112%;aspect-ratio:1;background:var(--grad);
+    filter:blur(46px);opacity:.28;border-radius:50%;z-index:0;top:6%}
+  .hero-photo img{position:relative;z-index:1;width:100%;max-width:440px;border-radius:50%}
+  .hero-photo .chip{position:absolute;z-index:2;background:var(--surface);border:1px solid var(--line);
+    border-radius:14px;padding:11px 15px;box-shadow:0 12px 30px rgba(23,20,15,.10);font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px}
+  .hero-photo .chip .em{font-size:17px}
+  .chip-1{top:12%;left:-2%}
+  .chip-2{bottom:14%;right:-3%}
+
+  /* ---------- Marquee ---------- */
+  .marquee-sec{padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:34px}
+  .marquee-label{text-align:center;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+  .marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+  .marquee-track{display:flex;gap:56px;width:max-content;animation:scroll 26s linear infinite}
+  .marquee:hover .marquee-track{animation-play-state:paused}
+  .marquee-track span{font-family:var(--serif);font-size:26px;color:var(--ink);opacity:.72;white-space:nowrap;font-weight:500}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* ---------- Section scaffold ---------- */
+  section{padding:96px 0}
+  .sec-head{max-width:620px;margin-bottom:52px}
+  .sec-kicker{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block}
+  .sec-title{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4.2vw,3.1rem);line-height:1.05;letter-spacing:-.02em}
+  .sec-sub{color:var(--muted);margin-top:16px;font-size:18px}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+  .about-photo{position:relative}
+  .about-photo img{border-radius:var(--radius);width:100%}
+  .about-photo .note{position:absolute;bottom:-18px;left:-18px;background:var(--ink);color:#fff;
+    padding:16px 20px;border-radius:16px;max-width:230px;font-size:14px;line-height:1.4}
+  .about-photo .note b{font-family:var(--serif);font-weight:600}
+  .about-body p{color:var(--muted);margin-bottom:18px;font-size:18px}
+  .about-body p strong{color:var(--ink);font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .chip-tag{border:1px solid var(--line);background:var(--surface);border-radius:100px;padding:8px 16px;font-size:14px;font-weight:500;color:var(--ink)}
+
+  /* ---------- Services ---------- */
+  .services{background:#F4F0E8}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .svc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:34px;transition:transform .3s ease, box-shadow .3s ease}
+  .svc:hover{transform:translateY(-5px);box-shadow:0 22px 44px rgba(23,20,15,.08)}
+  .svc .ic{width:52px;height:52px;border-radius:14px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:22px}
+  .svc h3{font-family:var(--serif);font-weight:600;font-size:23px;margin-bottom:12px;letter-spacing:-.01em}
+  .svc p{color:var(--muted);font-size:16px;margin-bottom:18px}
+  .svc ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .svc ul li{font-size:13px;font-weight:500;color:var(--muted);background:#F7F3EC;border-radius:100px;padding:6px 13px}
+
+  /* ---------- Work ---------- */
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+    display:flex;flex-direction:column;transition:transform .3s ease, box-shadow .3s ease}
+  .card:hover{transform:translateY(-6px);box-shadow:0 26px 50px rgba(23,20,15,.12)}
+  .card .cover{aspect-ratio:16/10;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:22px}
+  .card .cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .card:hover .cover img{transform:scale(1.05)}
+  .card .cover .ov{position:relative;z-index:2}
+  .card .cover.grad-a{background:linear-gradient(140deg,#FF7A3D,#FF3D77)}
+  .card .cover.grad-b{background:linear-gradient(140deg,#2B2440,#6D5BE0)}
+  .card .cover.grad-c{background:linear-gradient(140deg,#0E7C6B,#7BD1A0)}
+  .card .cover.grad-d{background:linear-gradient(140deg,#B4341F,#FF7A3D)}
+  .card .cover.grad-e{background:linear-gradient(140deg,#1E3A5F,#4DA0D9)}
+  .card .cover.grad-f{background:linear-gradient(140deg,#5B2333,#C56A86)}
+  .cover .big{font-family:var(--serif);color:rgba(255,255,255,.95);font-size:30px;font-weight:600;line-height:1.05;z-index:2;position:relative}
+  .card .body{padding:22px 24px 26px;flex:1;display:flex;flex-direction:column}
+  .card .tag{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+  .card h3{font-family:var(--serif);font-weight:600;font-size:21px;margin-bottom:8px;letter-spacing:-.01em}
+  .card p{color:var(--muted);font-size:15px;flex:1}
+  .card .link{margin-top:16px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:7px;color:var(--ink)}
+  .card .link .ar{transition:transform .25s}
+  .card:hover .link .ar{transform:translateX(4px)}
+
+  /* ---------- Video ---------- */
+  .video-sec{background:var(--ink);color:#fff}
+  .video-sec .sec-kicker{color:#FF8A6B}
+  .video-sec .sec-title{color:#fff}
+  .video-sec .sec-sub{color:#B7AEA2}
+  .video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:860px;margin:0 auto}
+  .video-grid video{width:100%;height:auto;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:#000;display:block}
+
+  /* ---------- Experience ---------- */
+  .xp-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+  .tl{position:relative}
+  .tl-item{position:relative;padding:0 0 34px 30px;border-left:2px solid var(--line)}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{content:"";position:absolute;left:-7px;top:3px;width:12px;height:12px;border-radius:50%;background:var(--grad)}
+  .tl-item .role{font-family:var(--serif);font-weight:600;font-size:19px}
+  .tl-item .co{font-weight:600;color:var(--accent);font-size:15px;margin:2px 0 4px}
+  .tl-item .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+  .tl-item p{font-size:15px;color:var(--muted)}
+  .side-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px;margin-bottom:24px}
+  .side-card h4{font-family:var(--serif);font-size:18px;margin-bottom:16px;display:flex;align-items:center;gap:9px}
+  .edu-item{padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+  .edu-item:last-child{border:0;margin:0;padding:0}
+  .edu-item .d{font-weight:600;font-size:16px}
+  .edu-item .s{font-size:14px;color:var(--muted)}
+  .cert-list{display:flex;flex-wrap:wrap;gap:9px}
+  .cert-list span{font-size:13px;font-weight:500;background:#F4F0E8;border-radius:100px;padding:7px 14px}
+
+  /* ---------- Contact ---------- */
+  .contact{position:relative}
+  .contact-card{background:var(--ink);border-radius:32px;padding:66px 56px;color:#fff;position:relative;overflow:hidden}
+  .contact-card .glow{position:absolute;width:420px;height:420px;background:var(--grad);filter:blur(90px);opacity:.4;border-radius:50%;top:-160px;right:-120px}
+  .contact-card .inner{position:relative;z-index:2;display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:center}
+  .contact-card h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4vw,3rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:18px}
+  .contact-card p{color:#C4BBAF;font-size:18px;max-width:40ch}
+  .contact-actions{display:flex;flex-direction:column;gap:14px}
+  .contact-actions a{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;
+    padding:16px 20px;display:flex;align-items:center;gap:13px;font-weight:500;transition:.25s}
+  .contact-actions a:hover{background:rgba(255,255,255,.12);transform:translateX(4px)}
+  .contact-actions .em{font-size:20px}
+  .contact-actions small{display:block;color:#9C9388;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+
+  /* ---------- Footer ---------- */
+  footer{padding:44px 0 40px;border-top:1px solid var(--line);margin-top:96px}
+  .foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px}
+  .foot .brand{font-size:19px}
+  .foot-links{display:flex;gap:24px;font-size:14px;color:var(--muted)}
+  .foot-links a:hover{color:var(--ink)}
+  .foot-copy{font-size:13px;color:var(--muted);width:100%;margin-top:8px}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  /* Fallback: if JS is disabled, never hide content */
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:44px}
+    .hero-photo{order:-1}
+    .hero-photo img{max-width:320px}
+    .about-grid{grid-template-columns:1fr;gap:44px}
+    .about-photo{max-width:400px}
+    .svc-grid,.work-grid,.xp-grid,.contact-card .inner,.video-grid{grid-template-columns:1fr}
+    .contact-card{padding:44px 28px}
+    .contact-card .inner{gap:32px}
+    .video-grid{max-width:340px}
+    .nav-links{display:none}
+    .nav-links.open{display:flex;position:absolute;top:72px;left:0;right:0;flex-direction:column;
+      background:var(--surface);border-bottom:1px solid var(--line);padding:24px;gap:20px}
+    .nav-cta .btn-ghost{display:none}
+    .hamburger{display:block}
+    section{padding:72px 0}
+  }
+  @media(max-width:560px){
+    .work-grid{grid-template-columns:1fr}
+    .hero-badges{gap:20px}
+    .foot{flex-direction:column;align-items:flex-start}
+  }
+</style>
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="dot"></span>Parul Godara</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="assets/parul-godara-resume.pdf" target="_blank" class="btn btn-ghost">Résumé</a>
+      <a href="#contact" class="btn btn-primary">Let's talk</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Social Media &amp; Marketing</span>
+      <h1 class="title">Making brands relevant in a very <em>noisy</em> internet.</h1>
+      <p class="lead">I'm Parul — a freelance social media manager &amp; marketing professional building content, communities and influencer campaigns for D2C and international brands.</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-grad">View my work</a>
+        <a href="#contact" class="btn btn-ghost">Start a project →</a>
+      </div>
+      <div class="hero-badges">
+        <div class="b"><strong>₹15L+</strong> Influencer budgets managed</div>
+        <div class="b"><strong>₹3.5L</strong> Single-day pop-up sales</div>
+        <div class="b"><strong>+25%</strong> Reach &amp; engagement lift</div>
+      </div>
+    </div>
+    <div class="hero-photo reveal">
+      <div class="blob"></div>
+      <img src="assets/parul-hero.png" alt="Parul Godara" />
+      <div class="chip chip-1"><span class="em">🌍</span> Dubai · London · India</div>
+      <div class="chip chip-2"><span class="em">✦</span> Bombay Shaving Co.</div>
+    </div>
+  </div>
+
+  <!-- Brand marquee -->
+  <div class="marquee-sec">
+    <div class="wrap">
+      <p class="marquee-label">Brands &amp; teams I've worked with</p>
+      <div class="marquee">
+        <div class="marquee-track">
+          <span>Bombay Shaving Company</span><span>·</span>
+          <span>Truemens</span><span>·</span>
+          <span>House of UGC</span><span>·</span>
+          <span>Dubai Real Estate</span><span>·</span>
+          <span>London Sustainable Fashion</span><span>·</span>
+          <span>Design Café</span><span>·</span>
+          <span>GAO Tek</span><span>·</span>
+          <span>Bombay Shaving Company</span><span>·</span>
+          <span>Truemens</span><span>·</span>
+          <span>House of UGC</span><span>·</span>
+          <span>Dubai Real Estate</span><span>·</span>
+          <span>London Sustainable Fashion</span><span>·</span>
+          <span>Design Café</span><span>·</span>
+          <span>GAO Tek</span><span>·</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="assets/parul-about.png" alt="Parul Godara" />
+      <div class="note"><b>Delhi, India</b><br/>Working with brands across India, the UK &amp; the UAE.</div>
+    </div>
+    <div class="about-body reveal">
+      <span class="sec-kicker">About</span>
+      <h2 class="sec-title" style="margin-bottom:22px">Marketing that's equal parts strategy &amp; storytelling.</h2>
+      <p>I'm a freelance <strong>Social Media Manager &amp; Marketing professional</strong> working with both international and Indian brands — from real estate agencies in Dubai and sustainable fashion labels in London to D2C brands and marketing agencies across India.</p>
+      <p>My focus is <strong>influencer marketing</strong>: I've run campaigns with budgets of around <strong>₹15 lakh</strong> for brands including <strong>Bombay Shaving Company</strong>, handling everything end-to-end — influencer identification, planning, coordination, content execution and campaign management.</p>
+      <p>Alongside that, I bring hands-on experience in social media strategy, content creation &amp; production, and digital marketing execution — plus a Post Graduate Programme in Management Practice &amp; Leadership.</p>
+      <div class="chips">
+        <span class="chip-tag">Influencer Marketing</span>
+        <span class="chip-tag">Social Media Strategy</span>
+        <span class="chip-tag">Content &amp; Production</span>
+        <span class="chip-tag">Campaign Execution</span>
+        <span class="chip-tag">Digital Marketing</span>
+        <span class="chip-tag">Brand Communication</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">What I do</span>
+      <h2 class="sec-title">Services built around growth.</h2>
+      <p class="sec-sub">End-to-end support across the content and campaign lifecycle — from the first idea to the final report.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal">
+        <div class="ic">📣</div>
+        <h3>Influencer Marketing</h3>
+        <p>End-to-end campaigns — creator identification, planning, coordination, content execution and delivery — managing budgets up to ₹15 lakh.</p>
+        <ul><li>Creator sourcing</li><li>Campaign planning</li><li>Briefing &amp; approvals</li></ul>
+      </div>
+      <div class="svc reveal">
+        <div class="ic">📱</div>
+        <h3>Social Media Management</h3>
+        <p>Strategy, content calendars, posting and community engagement that keep brands consistent and growing across platforms.</p>
+        <ul><li>Content strategy</li><li>Calendars</li><li>Engagement</li></ul>
+      </div>
+      <div class="svc reveal">
+        <div class="ic">🎬</div>
+        <h3>Content &amp; Production</h3>
+        <p>Content ideation and production coordination across designers and editors — from concept to on-brand, platform-ready assets.</p>
+        <ul><li>Ideation</li><li>Production</li><li>Creative direction</li></ul>
+      </div>
+      <div class="svc reveal">
+        <div class="ic">📊</div>
+        <h3>Digital Marketing &amp; Strategy</h3>
+        <p>Campaign strategy, competitor and market research, and performance tracking to turn activity into measurable results.</p>
+        <ul><li>Market research</li><li>Campaign strategy</li><li>Reporting</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">Selected work</span>
+      <h2 class="sec-title">Strategy decks &amp; case studies.</h2>
+      <p class="sec-sub">A selection of brand, marketing and research projects. Click any project to open the full deck.</p>
+    </div>
+    <div class="work-grid">
+
+      <a class="card reveal" href="assets/projects/pay-with-ring.pdf" target="_blank">
+        <div class="cover grad-a"><span class="big">Pay<br/>With Ring</span></div>
+        <div class="body">
+          <span class="tag">Marketing Strategy</span>
+          <h3>Pay With Ring</h3>
+          <p>Marketing &amp; go-to-market strategy for a wearable payments product — positioning, audience and channel plan.</p>
+          <span class="link">Open deck <span class="ar">→</span></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="assets/projects/sugar-paw-branding.pdf" target="_blank">
+        <div class="cover grad-c"><span class="big">Sugar Paw</span></div>
+        <div class="body">
+          <span class="tag">Branding</span>
+          <h3>Sugar Paw</h3>
+          <p>End-to-end brand identity and communication direction for a pet-care brand, from concept to visual system.</p>
+          <span class="link">Open deck <span class="ar">→</span></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="assets/projects/maggi-brand-communication.pdf" target="_blank">
+        <div class="cover grad-d"><span class="big">Maggi</span></div>
+        <div class="body">
+          <span class="tag">Brand Communication</span>
+          <h3>Maggi</h3>
+          <p>Brand communication and messaging strategy for an iconic FMCG brand across audience and campaign touchpoints.</p>
+          <span class="link">Open deck <span class="ar">→</span></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="assets/projects/home-centre-digital-marketing.pdf" target="_blank">
+        <div class="cover grad-e"><span class="big">Home<br/>Centre</span></div>
+        <div class="body">
+          <span class="tag">Digital Marketing</span>
+          <h3>Home Centre</h3>
+          <p>Full-funnel digital marketing strategy for a home &amp; lifestyle retailer — channels, content and performance.</p>
+          <span class="link">Open deck <span class="ar">→</span></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="assets/projects/hm-sdg-goals.pdf" target="_blank">
+        <div class="cover grad-c"><span class="big">H&amp;M<br/>&amp; the SDGs</span></div>
+        <div class="body">
+          <span class="tag">Sustainability</span>
+          <h3>H&amp;M — SDG Goals</h3>
+          <p>Sustainability positioning for a global fashion retailer, mapped against the UN Sustainable Development Goals.</p>
+          <span class="link">Open deck <span class="ar">→</span></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="assets/projects/execube-digital-marketing.pdf" target="_blank">
+        <div class="cover grad-b"><span class="big">Execube</span></div>
+        <div class="body">
+          <span class="tag">Digital Marketing Strategy</span>
+          <h3>Execube</h3>
+          <p>Digital marketing and growth strategy — audience insight, channel mix and a campaign roadmap.</p>
+          <span class="link">Open deck <span class="ar">→</span></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="assets/projects/coffee-brand-strategy.docx" target="_blank">
+        <div class="cover grad-f"><span class="big">Coffee<br/>Brand</span></div>
+        <div class="body">
+          <span class="tag">Brand Strategy</span>
+          <h3>Coffee Brand Strategy</h3>
+          <p>Positioning and brand strategy for a specialty coffee brand — identity, audience and messaging.</p>
+          <span class="link">Open document <span class="ar">→</span></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="assets/projects/twitter-market-research.pdf" target="_blank">
+        <div class="cover grad-e"><span class="big">Twitter<br/>Research</span></div>
+        <div class="body">
+          <span class="tag">Market Research</span>
+          <h3>X / Twitter Market Research</h3>
+          <p>Market research and audience insight study exploring behaviour, positioning and content opportunity.</p>
+          <span class="link">Open deck <span class="ar">→</span></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="assets/projects/tableau-dashboard.jpg" target="_blank">
+        <div class="cover grad-b"><img src="assets/projects/tableau-dashboard.jpg" alt="Tableau sales dashboard" /></div>
+        <div class="body">
+          <span class="tag">Data &amp; Analytics</span>
+          <h3>Sales Dashboard</h3>
+          <p>Interactive Tableau dashboard analysing sales by region, product, source, payment method and time of day.</p>
+          <span class="link">View dashboard <span class="ar">→</span></span>
+        </div>
+      </a>
+
+    </div>
+    <p class="reveal" style="text-align:center;margin-top:34px;color:var(--muted);font-size:15px">
+      More decks — <a href="assets/projects/future-of-automobile.pdf" target="_blank" style="color:var(--accent);font-weight:600">Future of Automobile</a>,
+      <a href="assets/projects/consumer-psychology.pdf" target="_blank" style="color:var(--accent);font-weight:600">Consumer Psychology</a> &amp;
+      <a href="assets/projects/organizational-behaviour.pdf" target="_blank" style="color:var(--accent);font-weight:600">Organizational Behaviour</a>.
+    </p>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section class="video-sec">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-inline:auto;text-align:center">
+      <span class="sec-kicker">In motion</span>
+      <h2 class="sec-title">Content, on camera.</h2>
+      <p class="sec-sub">A glimpse of on-camera &amp; UGC-style content.</p>
+    </div>
+    <div class="video-grid reveal">
+      <video src="assets/video-1.mp4" controls playsinline preload="metadata"></video>
+      <video src="assets/video-2.mp4" controls playsinline preload="metadata"></video>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-kicker">Experience</span>
+      <h2 class="sec-title">Where I've made an impact.</h2>
+    </div>
+    <div class="xp-grid">
+      <div class="tl reveal">
+        <div class="tl-item">
+          <div class="role">Marketing Operations &amp; Brand Coordination</div>
+          <div class="co">Truemens</div>
+          <div class="meta">Oct 2025 – Present · Remote</div>
+          <p>Coordinate end-to-end content &amp; marketing workflows across creators, editors and internal teams; manage creator sourcing and partnerships aligned to brand goals.</p>
+        </div>
+        <div class="tl-item">
+          <div class="role">Brand &amp; Client Coordination</div>
+          <div class="co">House of UGC</div>
+          <div class="meta">Creator partnerships &amp; campaigns</div>
+          <p>Coordinated between brands, creators and creative teams to deliver content-led campaigns aligned with business and content objectives.</p>
+        </div>
+        <div class="tl-item">
+          <div class="role">Event Coordinator &amp; Social Media Manager</div>
+          <div class="co">Kismet.e.kheer</div>
+          <div class="meta">On-ground &amp; social</div>
+          <p>Planned pop-up brand initiatives contributing to <strong style="color:var(--ink)">₹3.5L in single-day sales</strong>; led social execution with a <strong style="color:var(--ink)">25% lift</strong> in reach &amp; engagement.</p>
+        </div>
+        <div class="tl-item">
+          <div class="role">Shadow Mentee — VP (R&amp;D)</div>
+          <div class="co">Design Café</div>
+          <div class="meta">Sales strategy &amp; operations</div>
+          <p>Gained exposure to sales strategy and business operations; conducted market &amp; expansion research and proposed workflow improvements.</p>
+        </div>
+        <div class="tl-item">
+          <div class="role">SEO Strategy Intern</div>
+          <div class="co">GAO Tek</div>
+          <div class="meta">Remote</div>
+          <p>Competitor analysis, keyword research and audience-focused content planning to surface trends and positioning insights.</p>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="side-card">
+          <h4>🎓 Education</h4>
+          <div class="edu-item">
+            <div class="d">PG Programme, Management Practice &amp; Leadership</div>
+            <div class="s">Vedica Scholars Programme for Women, New Delhi · Aug 2023 – Jan 2025</div>
+          </div>
+          <div class="edu-item">
+            <div class="d">Bachelor of Arts (Programme)</div>
+            <div class="s">IP College, University of Delhi · Apr 2019 – May 2022</div>
+          </div>
+        </div>
+        <div class="side-card">
+          <h4>📜 Certifications</h4>
+          <div class="cert-list">
+            <span>Google Ads Creative</span>
+            <span>Meta Ads</span>
+            <span>Strategy &amp; Business Analysis</span>
+            <span>Microsoft Excel</span>
+          </div>
+        </div>
+        <div class="side-card">
+          <h4>🧰 Tools</h4>
+          <div class="cert-list">
+            <span>Notion</span><span>Google Sheets</span><span>Canva</span>
+            <span>Google Workspace</span><span>Tableau</span><span>AI tools</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <div class="glow"></div>
+      <div class="inner">
+        <div>
+          <h2>Let's build something worth following.</h2>
+          <p>Have a brand, a launch or a campaign in mind? I'd love to hear about it. Let's talk about how we can make it grow.</p>
+        </div>
+        <div class="contact-actions">
+          <a href="mailto:pgodara989@gmail.com"><span class="em">✉️</span><span><small>Email</small>pgodara989@gmail.com</span></a>
+          <a href="tel:+919717211364"><span class="em">📞</span><span><small>Phone</small>+91 97172 11364</span></a>
+          <a href="https://www.linkedin.com/in/parulgodara/" target="_blank"><span class="em">in</span><span><small>LinkedIn</small>Connect with me</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot">
+    <a href="#top" class="brand"><span class="dot"></span>Parul Godara</a>
+    <nav class="foot-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="assets/parul-godara-resume.pdf" target="_blank">Résumé</a>
+      <a href="mailto:pgodara989@gmail.com">Email</a>
+    </nav>
+    <p class="foot-copy">© <span id="year"></span> Parul Godara · Social Media &amp; Marketing · Delhi, India</p>
+  </div>
+</footer>
+
+<script>
+  // Sticky header border
+  const header = document.getElementById('top');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll); onScroll();
+
+  // Mobile nav
+  const burger = document.getElementById('hamburger');
+  const links = document.getElementById('navLinks');
+  burger.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
